@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, body > p {
+    background-color:rgb(186, 199, 199);
+}
+
+h1 {
+    padding: 4rem;
+    border: 2px solid red;
+}
+
+body > p {
+    padding: 2rem 1rem;
+    margin: 1rem;
+    /* padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem; */
+}
+em, strong {
+    /* display:block; */
+    background-color: lightblue;
+
+}
+
+.btn {
+    color: white;
+    background-color: #5995da;
+    font-weight: bold;
+    padding: 1.5rem;
+    text-align: center;
+    border: 2px solid blue;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    width: 33%;
+}
+
+.btn img {
+    width: 50%;
+}
