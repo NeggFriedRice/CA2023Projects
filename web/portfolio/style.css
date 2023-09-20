@@ -1,0 +1,99 @@
+#fiveserver-info-wrapper {
+    display: none !important;
+  }
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn1 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn2 {
+    0% {opacity: 0;}
+    33% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn3 {
+    0% {opacity: 0;}
+    66% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body {
+    background-color: #d0f7ed;
+    font-family: 'Monsterrat', sans-serif;
+    
+}
+
+
+header {
+    padding: 5rem 0 0;
+    color:#ffffff; 
+    animation: fadeIn1 1s ease-in; 
+}
+
+h1 {
+    background: #367c5f;
+    padding-left: 1rem;
+    font-size: 3rem;
+    height: 5rem;  
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+#contactEmail {
+    background: #1e553e;
+    color:#ffffff;
+    font-size: 1rem;
+    height: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 1.5rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #2f8f8a;
+    color: white;
+    padding: 1rem;
+    margin: 0.2rem;
+    border-radius: 1.5rem;
+    transition: 0.8s;
+    display: inline-block;
+    width: 8rem;
+    text-align: center;
+    animation: fadeIn2 1s ease-in; 
+
+}
+
+nav a:hover {
+    transition: 0.8s;
+    background-color: #163d2d;
+
+}
+
+article {
+    font-family: 'Esteban', serif;
+    animation: fadeIn3 1s ease-in; 
+}
+
+article #blurb {
+    padding: 0.5rem 1rem;
+}
+
+#blurb p {
+    width: 60%;
+    padding: 0.5rem 0;
+}
