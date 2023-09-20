@@ -2,6 +2,7 @@
     display: none !important;
   }
 
+
 /* Reset */
 * {
     margin: 0;
@@ -17,7 +18,6 @@ i {
 body {
     background-color: #d0f7ed;
     font-family: 'Monsterrat', sans-serif;
-    
 }
 
 header {
@@ -25,8 +25,9 @@ header {
     color:#ffffff; 
     animation: fadeIn1 1s ease-in;
     display: block; 
-    
-}
+    align-items: center; 
+    text-align: center;
+}   
 
 #detailsMain {
     display: flex;
@@ -34,12 +35,13 @@ header {
 
 h1 {
     background: #367c5f;
-    padding-left: 1rem;
+    padding: auto;
     font-size: 3rem;
     height: 5rem;  
     display: flex;
     align-items: center;
-    font-weight: 600;
+    justify-content: center;
+    font-weight: 600;  
 }
 
 #detailsMain a {
@@ -57,6 +59,7 @@ h1 {
     transition: 0.8s;
 }
 
+/* Hover animation for contact details */
 #detailsMain a:hover {
     color: #ffffff;
 }
@@ -66,18 +69,18 @@ h1 {
     justify-content: flex-end;
 }
 
-
-
 /* Create a standard navbar with a fixed position at top of page. */
 nav {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navbar {
     background-color:#2f8f8a;
     width: 100%;
     position: fixed;
+    justify-content: center;
 }
 
 .navbar a, .navbar i {
@@ -94,8 +97,6 @@ nav {
 #presentPage, #presentPage .material-symbols-outlined {
     display: inline-flex;
     align-items: center;
-    justify-items: center;
-    text-decoration: none;
     margin: 0.1rem 0.5rem;
     color: #113130;
     font-size: 1rem;
@@ -113,25 +114,30 @@ nav {
     display: flex;
     align-items: center;
     width: 10rem;
-    text-align: center;
     animation: fadeIn2 1s ease-in; 
 }
 
+/* Hover animation for special nav buttons */
 #welcomeNav a:hover {
     transition: 0.8s;
     background-color: #163d2d;
 }
 
+.centerContent {
+    max-width: 800px;
+    margin: auto;
+}
 article {
     font-family: 'Esteban', serif;
     animation: fadeIn3 1.1s ease-in; 
+    color: #113130;
 }
 
 article #blurb {
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1rem;
 }
 
 #blurb p {
-    width: 60%;
+    width: 70%;
     padding: 0.5rem 0;
 }
