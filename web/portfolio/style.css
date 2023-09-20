@@ -27,17 +27,25 @@
     100% {opacity: 1;}
 }
 
+/* Icon formatting */
+i {
+    margin: 0 0.5rem;
+}
+
 body {
     background-color: #d0f7ed;
     font-family: 'Monsterrat', sans-serif;
     
 }
 
-
 header {
     padding: 5rem 0 0;
     color:#ffffff; 
     animation: fadeIn1 1s ease-in; 
+}
+
+#detailsMain {
+    display: flex;
 }
 
 h1 {
@@ -50,19 +58,34 @@ h1 {
     font-weight: 600;
 }
 
-#contactEmail {
+#detailsMain a {
     background: #1e553e;
-    color:#ffffff;
+    color:#98f0cea9;
     font-size: 1rem;
     height: 2.5rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 1.5rem;
+    padding: 0 1.5rem;
     text-decoration: none;
     margin-bottom: 0.5rem;
+    width: 100%;
+    transition: 0.8s;
 }
 
+#detailsMain a:hover {
+    color: #ffffff;
+}
+
+#linksRight {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
 nav a {
     text-decoration: none;
     background-color: #2f8f8a;
@@ -71,8 +94,9 @@ nav a {
     margin: 0.2rem;
     border-radius: 1.5rem;
     transition: 0.8s;
-    display: inline-block;
-    width: 8rem;
+    display: flex;
+    align-items: center;
+    width: 10rem;
     text-align: center;
     animation: fadeIn2 1s ease-in; 
 
