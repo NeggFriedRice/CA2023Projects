@@ -66,10 +66,42 @@ h1 {
     justify-content: flex-end;
 }
 
+
+
+/* Create a standard navbar with a fixed position at top of page. */
 nav {
     display: flex;
     flex-wrap: wrap;
 }
+
+.navbar {
+    background-color:#2f8f8a;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar a, .navbar i {
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+    margin: 0.1rem 0.5rem;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Indicates to user that they are already on this page; link removed and is text only */
+#presentPage, #presentPage .material-symbols-outlined {
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+    margin: 0.1rem 0.5rem;
+    color: #113130;
+    font-size: 1rem;
+}
+
+/* Special nav buttons for welcome page */
 #welcomeNav a {
     text-decoration: none;
     background-color: #2f8f8a;
@@ -83,13 +115,11 @@ nav {
     width: 10rem;
     text-align: center;
     animation: fadeIn2 1s ease-in; 
-
 }
 
-nav a:hover {
+#welcomeNav a:hover {
     transition: 0.8s;
     background-color: #163d2d;
-
 }
 
 article {
