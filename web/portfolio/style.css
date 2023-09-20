@@ -9,24 +9,6 @@
     box-sizing: border-box;
 }
 
-/* Keyframes for animations */
-@keyframes fadeIn1 {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes fadeIn2 {
-    0% {opacity: 0;}
-    33% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes fadeIn3 {
-    0% {opacity: 0;}
-    66% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
 /* Icon formatting */
 i {
     margin: 0 0.5rem;
@@ -41,7 +23,9 @@ body {
 header {
     padding: 5rem 0 0;
     color:#ffffff; 
-    animation: fadeIn1 1s ease-in; 
+    animation: fadeIn1 1s ease-in;
+    display: block; 
+    
 }
 
 #detailsMain {
@@ -66,7 +50,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     text-decoration: none;
     margin-bottom: 0.5rem;
     width: 100%;
@@ -86,7 +70,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
 }
-nav a {
+#welcomeNav a {
     text-decoration: none;
     background-color: #2f8f8a;
     color: white;
@@ -110,7 +94,7 @@ nav a:hover {
 
 article {
     font-family: 'Esteban', serif;
-    animation: fadeIn3 1s ease-in; 
+    animation: fadeIn3 1.1s ease-in; 
 }
 
 article #blurb {

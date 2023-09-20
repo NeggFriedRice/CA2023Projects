@@ -1,0 +1,17 @@
+/* Keyframes for animations */
+@keyframes fadeIn1 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn2 {
+    0% {opacity: 0;}
+    33% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn3 {
+    0% {opacity: 0;}
+    66% {opacity: 0;}
+    100% {opacity: 1;}
+}
