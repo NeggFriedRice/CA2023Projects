@@ -1,6 +1,4 @@
-#fiveserver-info-wrapper {
-    display: none !important;
-  }
+
 
 
 /* Reset */
@@ -9,6 +7,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 /* Icon formatting */
 i {
@@ -73,22 +73,58 @@ h1 {
     color: #ffffff;
 }
 
-article {
+/* COMPONENT: Article */
+article h2, article > div {
     font-family: 'Esteban', serif;
     animation: fadeIn3 1.75s ease-in; 
     color: #113130;
     max-width: 800px;
     margin: auto;
+    /* padding: 1.5rem 1rem 0; */
 }
 
-/* COMPONENT: Article */
+article, article #blurb, article > div, .container > div {
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+}
+
 article #blurb {
-    padding: 1.5rem 1rem;
+    width: 60%;
 }
 
-#blurb p {
-    width: 60%;
-    padding: 0.5rem 0;
+#photosWelcome {
+    margin: auto;
+}
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+    padding: 1rem 0 0;
+    justify-content: center;
+    
+}
+
+/* Paragraph formatting */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Unordered list formatting */
+ul {
+    margin: 0 1rem;
+}
+
+li {
+    margin: 0 0 0.5rem;
+}
+
+/* Create box for headings */
+.heading2 {
+    display:flex;
+    justify-content: flex-start;
+    height: 20vh;
+    
+    
 }
 
 /* Media breakpoint for screens <500px (Phones) */
@@ -102,5 +138,20 @@ article #blurb {
     #detailsMain a {
         font-size: 0.65rem;
     }
+
+    article h2 {
+        font-size: 1rem;
+    }
+
+    article #blurb {
+        font-size: 0.8rem;
+    }
 }
 
+/* Media breakpoint for screens between 501px and 768px (Tablets) */
+@media only screen and (min-width: 501px) and (max-width:768px) {
+    
+    .heading2 {
+        margin-top: 5vh;
+    }
+}
