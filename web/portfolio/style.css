@@ -19,7 +19,7 @@ body {
     background-color: #d0f7ed;
     font-family: 'Monsterrat', sans-serif;
 }
-
+/* COMPONENT: Header formatting */
 header {
     padding: 5rem 0 0;
     color:#ffffff; 
@@ -63,27 +63,25 @@ h1 {
     transition: 0.8s;
 }
 
-/* Hover animation for contact details */
-#detailsMain a:hover {
-    color: #ffffff;
-}
-
 #linksRight {
     display: flex;
     justify-content: flex-end;
 }
 
-.centerContent {
-    max-width: 800px;
-    margin: auto;
+/* Hover animation for contact details */
+#detailsMain a:hover {
+    color: #ffffff;
 }
 
 article {
     font-family: 'Esteban', serif;
     animation: fadeIn3 1.75s ease-in; 
     color: #113130;
+    max-width: 800px;
+    margin: auto;
 }
 
+/* COMPONENT: Article */
 article #blurb {
     padding: 1.5rem 1rem;
 }
@@ -93,8 +91,8 @@ article #blurb {
     padding: 0.5rem 0;
 }
 
-/* Media breakpoint for screens <460px */
-@media only screen and (max-width: 460px) {
+/* Media breakpoint for screens <500px (Phones) */
+@media only screen and (max-width: 500px) {
     /* Reduce name size */
     h1 {
         font-size: 2rem;
@@ -105,3 +103,4 @@ article #blurb {
         font-size: 0.65rem;
     }
 }
+

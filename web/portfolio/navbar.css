@@ -1,4 +1,4 @@
-/* Special nav buttons for welcome page only */
+/* COMPONENT: Nav Bar (Home page only) */
 #welcomeNav a {
     text-decoration: none;
     background-color: #2f8f8a;
@@ -14,13 +14,13 @@
     
 }
 
-/* Hover animation for special nav buttons */
+/* Hover animation for home page nav buttons */
 #welcomeNav a:hover {
     transition: 0.8s;
     background-color: #163d2d;
 }
 
-/* Standard navbar with a fixed position at top of page. */
+/* COMPONENT: Standard Nav Bar */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -45,7 +45,7 @@ nav {
     animation: fadeIn3 1.5s ease-in;
 }
 
-/* Link removed and is text only on nav text, indicates to user that they are already on this page; */
+/* Link removed from nav button, indicates to user that they are already on this page; */
 #presentPage, #presentPage .material-symbols-outlined {
     display: inline-flex;
     align-items: center;
@@ -55,19 +55,63 @@ nav {
     animation: fadeIn3 1.5s ease-in;
 }
 
-/* Media breakpoint for screens <460px */
-@media only screen and (max-width: 460px) {
+/* Media breakpoint for screens <500px */
+@media only screen and (max-width: 500px) {
+    #welcomeNav a {
+        width: 30%;
+        padding: 1.5%;
+        font-size: 0.7rem;
+    }
+    
     /* Convert nav bar to icons only */
     .navbar a {
         font-size: 0;
     }
 
+    #presentPage {
+        font-size: 0;
+    }
+
+    /* Increase size of icons */
+    .navbar i {
+        font-size: 2rem;
+    }
+
+    #presentPage .material-symbols-outlined {
+        font-size: 2rem;
+    }
     /* Spread icons out evenly */
     .navbar {
         justify-content: space-evenly;
+        height: 8%;
+        padding: 0.5rem;
+    }
+}
+
+/* Media breakpoint for screens between 501px and 1280px (Talets) */
+@media only screen and (min-width: 501px) and (max-width:1280px) {
+    
+    /* Convert nav bar to icons only */
+    .navbar a {
+        font-size: 0;
     }
 
     #presentPage {
         font-size: 0;
+    }
+
+    /* Increase size of icons */
+    .navbar i {
+        font-size: 2.5rem;
+    }
+
+    #presentPage .material-symbols-outlined {
+        font-size: 2.5rem;
+    }
+    /* Spread icons out evenly */
+    .navbar {
+        justify-content: space-evenly;
+        height: 8%;
+        padding: 0.5rem;
     }
 }
