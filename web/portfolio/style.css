@@ -23,7 +23,7 @@ body {
 header {
     padding: 5rem 0 0;
     color:#ffffff; 
-    animation: fadeIn1 1.5s ease-in;
+    animation: fadeIn2 1.25s ease-in;
     display: block; 
     align-items: center; 
     text-align: center;
@@ -42,7 +42,10 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;  
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: slide 1.25s ease-out;  
 }
 
 #detailsMain a {
@@ -70,74 +73,14 @@ h1 {
     justify-content: flex-end;
 }
 
-/* Create a standard navbar with a fixed position at top of page. */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.navbar {
-    background-color:#2f8f8a;
-    width: 100%;
-    height: 1.5rem;
-    position: fixed;
-    animation: slide 1.5s;
-}
-
-
-
-.navbar a, .navbar i {
-    display: inline-flex;
-    align-items: center;
-    justify-items: center;
-    text-decoration: none;
-    margin: 0.1rem 0.5rem;
-    color: white;
-    font-size: 1rem;
-    animation: fadeIn3 2s;
-    
-}
-
-/* Indicates to user that they are already on this page; link removed and is text only */
-#presentPage, #presentPage .material-symbols-outlined {
-    display: inline-flex;
-    align-items: center;
-    margin: 0.1rem 0.5rem;
-    color: #113130;
-    font-size: 1rem;
-    animation: fadeIn3 2s;
-}
-
-/* Special nav buttons for welcome page */
-#welcomeNav a {
-    text-decoration: none;
-    background-color: #2f8f8a;
-    color: white;
-    padding: 1rem;
-    margin: 0.2rem;
-    border-radius: 1.5rem;
-    transition: 0.8s;
-    display: flex;
-    align-items: center;
-    width: 10rem;
-    animation: fadeIn2 1.5s ease-in; 
-    
-}
-
-/* Hover animation for special nav buttons */
-#welcomeNav a:hover {
-    transition: 0.8s;
-    background-color: #163d2d;
-}
-
 .centerContent {
     max-width: 800px;
     margin: auto;
 }
+
 article {
     font-family: 'Esteban', serif;
-    animation: fadeIn3 1.5s ease-in; 
+    animation: fadeIn3 1.75s ease-in; 
     color: #113130;
 }
 
@@ -146,6 +89,19 @@ article #blurb {
 }
 
 #blurb p {
-    width: 70%;
+    width: 60%;
     padding: 0.5rem 0;
+}
+
+/* Media breakpoint for screens <460px */
+@media only screen and (max-width: 460px) {
+    /* Reduce name size */
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Reduce contact details size */
+    #detailsMain a {
+        font-size: 0.65rem;
+    }
 }

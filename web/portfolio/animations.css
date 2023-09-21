@@ -17,6 +17,13 @@
 }
 
 @keyframes slide {
-    0% {width: 0%}
-    100% {width: 100%}
+    0% {
+        width: 0vw;
+        opacity: 0%;
+    }
+
+    100% {
+        width: 100vw;
+        opacity: 100%;
+    }
 }
