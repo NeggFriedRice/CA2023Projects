@@ -8,7 +8,6 @@ def user_input():
             break
         else:
             print("This is not a language in the list")
-        
     return user_skills
 
 def calculate_score(userSkills, langDict):
@@ -23,13 +22,14 @@ def more_skills(userSkills, langDict):
         if k not in userSkills:
             print(k.capitalize() + f" would increase your score by {v}")
 
-welcome_message = """
-************************************************
+stars = "************************************************"
+welcome_message = f"""
+{stars}
 **  Welcome to the Coding Skill Scorer 3000!  **
 **  ----------------------------------------- **
 **  Please write 'done' after you've entered  **
 **         all your coding languages!         **
-************************************************
+{stars}
 """
 
 # Main
@@ -41,12 +41,11 @@ user_skills = user_input()
 score = calculate_score(user_skills, language_scores)
 
 print(f"""
-************************************************
-**       Your coding score is: {score}!       **
-************************************************    
-      """)
-
-print("""Here are other languages you can learn, and how much they'll increase your coding score!
-      """)
+{stars}
+**         Your coding score is: {score}!         **
+{stars}    
+      
+Here are other languages you can learn, and how much they'll increase your coding score!
+""")
 
 more_skills(user_skills, language_scores)
