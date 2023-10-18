@@ -1,4 +1,4 @@
-my_dog = { "name" : "Ted", "age" : "15", "breed" : "Border Collie"}
+my_dog = { "name" : "Ted", "age" : 15, "breed" : "Border Collie"}
 
 # Using the dict[key] will return the value of Ted
 print(my_dog["name"])
