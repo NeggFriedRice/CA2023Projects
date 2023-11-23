@@ -9,7 +9,7 @@ if creditNumber[0] == "4" and (len(creditNumber) == 13 or len(creditNumber) == 1
         # Bank number is digits 2 to 6
         bankNumber = creditNumber[1:6]
         # Account number is all remaining digits after bank number, but not including last number which is the check digit
-        accountNumber = creditNumber[6:len(creditNumber)-1]
+        accountNumber = creditNumber[6:-1]
         # Print bank number and account number
         print(f"Your bank number is {bankNumber} and account number is {accountNumber}")
 else:

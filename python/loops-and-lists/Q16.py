@@ -15,8 +15,9 @@ def calculate_score(userSkills, langDict):
     for k, v in langDict.items():
         if k in userSkills:
             sum += v
-    return sum
 
+    return sum
+   
 def more_skills(userSkills, langDict):
     for k, v in langDict.items():
         if k not in userSkills:

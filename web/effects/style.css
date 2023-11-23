@@ -1,0 +1,23 @@
+#fiveserver-info-wrapper {
+    display: none !important;
+  }
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background: salmon;
+    transition: transform 2s;
+    
+}
+
+div:hover {
+    left: 0;
+    transform: scale(0.5, 1);
+}
