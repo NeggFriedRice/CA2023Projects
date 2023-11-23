@@ -7,6 +7,7 @@ from sqlalchemy.exc import IntegrityError
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from datetime import timedelta
 from os import environ
+from models.user import User, UserSchema
 
 app = Flask(__name__)
 
@@ -45,19 +46,6 @@ class Card(db.Model):
 class CardSchema(ma.Schema):
     class Meta:
         fields = ('id', 'title', 'description', 'status', 'date_created')
-
-class User(db.Model):
-    __tablename__ = 'users'
-
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
-    email = db.Column(db.String, nullable=False, unique=True)
-    password = db.Column(db.String, nullable=False)
-    is_admin = db.Column(db.Boolean, default=False)
-
-class UserSchema(ma.Schema):
-    class Meta:
-        fields = ('id', 'name', 'email', 'password', 'is_admin')
 
 @app.cli.command('db_create')
 def db_create():
