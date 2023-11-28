@@ -1,4 +1,4 @@
-from 
+from setup import db, ma
 
 class User(db.Model):
     __tablename__ = 'users'
