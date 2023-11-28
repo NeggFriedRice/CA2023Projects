@@ -32,7 +32,7 @@ def register():
     except IntegrityError:
         return {'error' : 'Email address already in use'}, 409
 
-@app.route('/login', methods=['POST'])
+@users_bp.route('/login', methods=['POST'])
 def login():
     # 1. Parse incoming POST body through the schema
     user_info = UserSchema(exclude=['id', 'name', 'is_admin']).load(request.json)
@@ -47,3 +47,7 @@ def login():
         return {'token' : token, 'user' : UserSchema(exclude = ['password']).dump(user)}
     else:
         return {'error' : 'Invalid email or password'}, 401
+    
+@app.route('/')
+def home():
+    return "Hello world"
