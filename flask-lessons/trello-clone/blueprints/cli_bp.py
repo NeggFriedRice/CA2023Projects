@@ -2,6 +2,7 @@ from flask import Blueprint
 from setup import db, bcrypt
 from models.card import Card
 from models.user import User
+from models.comment import Comment
 from datetime import date
 
 
@@ -58,5 +59,14 @@ def db_seed():
 
     db.session.add_all(cards)
     db.session.commit()
+
+    comments = [
+        Comment (
+            message = "Comment 1",
+            user_id = users[0].id,
+            card_id = cards[1].id,
+
+        )
+    ]
 
     print("Database seeded")

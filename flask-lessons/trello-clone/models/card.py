@@ -15,6 +15,7 @@ class Card(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     # Pass model name into relationship method (i.e. an instance of the User model)
     user = db.relationship('User', back_populates='cards')
+    comments = db.relationship('Comment', back_populates='card')
 
 class CardSchema(ma.Schema):
     user = fields.Nested('UserSchema', exclude=['password'])
