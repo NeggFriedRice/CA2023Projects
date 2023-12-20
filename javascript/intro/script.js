@@ -41,6 +41,6 @@ const people = ["Matt", "John", "Mary", "Kate"]
 // second = people[1]
 
 // Create a variable called first and second, and take the first element and second element from people
-const [first, second] = people
+const [first, second, ...others] = people
 
-console.log(first, second)
+console.log(first, second, others)
