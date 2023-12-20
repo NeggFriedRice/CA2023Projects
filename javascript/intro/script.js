@@ -37,7 +37,10 @@
 
 const people = ["Matt", "John", "Mary", "Kate"]
 
-first = people[0]
-second = people[1]
+// first = people[0]
+// second = people[1]
+
+// Create a variable called first and second, and take the first element and second element from people
+const [first, second] = people
 
 console.log(first, second)
