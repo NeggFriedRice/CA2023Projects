@@ -48,7 +48,7 @@
 const bobBirds = ["Robin", "Crow"]
 const sallyBirds = ["Bluejay", "Cardinal"]
 
-const allBirds = bobBirds.concat(sallyBirds)
+const allBirds = [...bobBirds, ...sallyBirds, "Kookaburra"]
 
 console.log(allBirds)
-console.log(...bobBirds)
+console.log(bobBirds)
