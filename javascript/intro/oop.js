@@ -18,12 +18,56 @@
 
 // person.greet()
 
-class Person {
-    constructor(name, age) {
-        this.name = name
-        this.age = age
+// class Person {
+//     constructor(name, age) {
+//         this.name = name
+//         this.age = age
+//     }
+// }
+
+// const person = new Person("Matt", 51)
+// console.log(person)
+
+// class Person {
+//     constructor(name, age) {
+//         this.name = name
+//         this.age = age
+//     }
+
+//     greet() {
+//         console.log(`${this.name} is ${this.age} years old`)
+//     }
+// }
+
+// const person = new Person("Matt", 51)
+
+// person.greet()
+
+class Rectangle {
+
+    #width
+    #height
+
+    constructor(width, height) {
+        this.#width = width
+        this.#height = height
+    }
+
+    get width() { return this.#width }
+
+    set width(value) {
+        if (typeof value === 'number') {
+        this.#width = value
+        } else {
+            // Raise an exception
+        }
+    }
+
+    get area() {
+        return this.#width * this.#height
     }
 }
 
-const person = new Person("Matt", 51)
-console.log(person)
+const rect = new Rectangle(10, 20)
+rect.width = 'Hi'
+console.log(rect)
