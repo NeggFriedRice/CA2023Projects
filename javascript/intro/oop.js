@@ -68,6 +68,17 @@ class Rectangle {
     }
 }
 
-const rect = new Rectangle(10, 20)
-rect.width = 'Hi'
-console.log(rect)
+
+
+// Python
+// class Square(Rectangle):
+
+class Square extends Rectangle {
+
+    constructor(size=5) {
+        super(size, size)
+    }
+}
+
+const x = new Square()
+console.log(x.area)
