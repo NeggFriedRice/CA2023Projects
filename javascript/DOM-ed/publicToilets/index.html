@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Toilets</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.2.0/papaparse.js"></script>
+</head>
+
+<body>
+    <!-- Do your HTML elements here -->
+    <h1>Public Toilets in Australia</h1>
+    <div id="content"></div>
+    <ul></ul>
+
+
+    <script>
+        function displayData(data) {
+            // Your code here to display data on the page
+            const ul = document.querySelector("ul")
+            for (let i = 0; i < 50; i++) {
+            ul.innerHTML += `<li>${data[i].Name} - ${data[i].Address1}</li>`
+            console.log(data[1].Name)
+            }
+        }
+
+        function arrangeDataByPostcode(data) {
+            // You can use this function to implement the bonus challenge
+        }
+
+        function displayDataByPostcode(data) {
+            // You can use this function to implement the bonus challenge
+        }
+
+        Papa.parse("https://data.gov.au/data/dataset/553b3049-2b8b-46a2-95e6-640d7986a8c1/resource/34076296-6692-4e30-b627-67b7c4eb1027/download/toiletmapexport_200702_111356.csv", {
+            download: true,
+            header: true,
+            complete: function (results) {
+                // To see the data that a public toilet has in this API, 
+                // check the browser console!
+                console.log(results.data[1]);
+            
+                // implement your solution in the displayData function
+                displayData(results.data);
+
+                // bonus
+                // displayDataByPostcode(results.data);
+              
+            }
+        });
+
+    </script>
+</body>
+
+</html>

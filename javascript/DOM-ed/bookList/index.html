@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   	<head>
+  		<meta charset="utf-8"/>
+   		<title>Book List</title>
+  	</head>
+   	<body>
+		   <h1>My Book List</h1>
+           <ul></ul>
+	</body>
+    <script>
+    var books = [
+      {
+        title: 'The Design of EveryDay Things',
+        author: 'Don Norman',
+        alreadyRead: false
+      }, {
+        title: 'The Most Human Human',
+        author: 'Brian Christian',
+        alreadyRead: true
+      }, {
+        title: 'Baa baa Black Sheep',
+        author: 'Ronald McDonald',
+        alreadyRead: false
+      }, {
+        title: 'The Hatchet',
+        author: 'Yayoi Kusama',
+        alreadyRead: true
+      }
+    ];
+
+    const ul = document.querySelector('ul')
+    // const lis = books.map(book => `<li>${book.title} - ${book.author}</li>`)
+    // ul.innerHTML = lis.join("")
+    for (let book of books) {
+        if (book.alreadyRead == false) {
+            ul.innerHTML += `<li style="color:red">${book.title} - ${book.author}</li>`
+        }
+        else {
+            ul.innerHTML += `<li>${book.title} - ${book.author}</li>`
+        }
+    }
+
+    </script>
+</html>
