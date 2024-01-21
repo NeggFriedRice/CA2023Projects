@@ -8,7 +8,8 @@ fetch(rickMortyAPI)
 
         for (let i = 0; i < 20; i++) {
             charList.innerHTML += `<li>${characters.results[i].name}</li>`
-            statusList.innerHTML += `<li>${characters.results[i].status}</li>`
+            charList.innerHTML += `<img src="${characters.results[i].image}" style="max-width: 40px"></li>`
+            statusList.innerHTML += `<li style="padding: 22px 0px">${characters.results[i].status}</li>`
         }
     })
     // .then(charStream => {return charStream})
