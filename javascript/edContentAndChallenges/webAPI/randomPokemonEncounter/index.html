@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Encounter</title>
+</head>
+<body>
+    <div class="pokemonImage">
+        <img src="" alt="The image or sprite of the Pokemon you encountered!"/>
+    </div>
+    <div class="pokemonName"></div>
+    <div class="pokemonType1"></div>
+    <div class="pokemonType2"></div>
+
+    <button id="create-encounter">Encounter a Pokemon!</button>
+
+    <script>
+        function getRandomNumberForPokeAPI(){
+            // The "808" is just a safe maximum for how many Pokemon are currently in the API.
+            // When they add more Pokemon, that number should go up.
+            let suitableNumber = Math.floor(Math.random() * 808)
+            return suitableNumber
+        }
+
+        function showPokemonData(data) {
+            console.log(data)
+            // 3. Display the data on the webpage as indicated in the description
+        }
+        
+        function getPokemonData(){
+            // 1. update with the correct url for POKEAPI:
+            const POKEAPI = "https://pokeapi.co/api/v2/pokemon/?limit=808"
+            // 2. use fetch to call the API
+            let response = fetch(POKEAPI)
+            // and call showPokemonData with the data returned from the fetch
+                .then(data => data.json())
+                .then(data => {
+                    let pokeNum = getRandomNumberForPokeAPI()
+                    console.log(data.results[pokeNum].name)
+                    return data.results[pokeNum].name
+                })
+                .then(pokeName => {
+                    let pokeInfo = `https://pokeapi.co/api/v2/pokemon/${pokeName}`
+                    fetch(pokeInfo)
+                        .then(pokeObject => pokeObject.json())
+                        .then(pokeObjectJSON => {
+                            let pokeNameLabel = document.querySelector(".pokemonName")
+                            let pokeSprite = document.querySelector(".pokemonImage")
+                            pokeNameLabel.innerText = `Pokemon name: ${pokeObjectJSON.name}`
+                            pokeSprite.innerHTML = `<img src="${pokeObjectJSON.sprites.front_default}" alt="The image or sprite of the Pokemon you encountered!"/>`
+
+                            let type1Label = document.querySelector(".pokemonType1")
+                            let type2Label = document.querySelector(".pokemonType2")
+
+                            if (pokeObjectJSON.types.length > 1) {
+                                type1Label.innerText = `Pokemon Type 1: ${pokeObjectJSON.types[0].type.name}`
+                                type2Label.innerText = `Pokemon Type 2: ${pokeObjectJSON.types[1].type.name}`
+                            } else {
+                                type1Label.innerText = `Pokemon Type 1: ${pokeObjectJSON.types[0].type.name}`
+                            }
+                            console.log(pokeObjectJSON.types.length) // Returns number of types
+                        })
+                }
+
+                )
+        }
+        
+        // 4. Add the event listener to the button, so that clicking the button
+        //    triggers a call to getPokemonData to display a new Pokemon
+        let button = document.getElementById("create-encounter")
+        button.addEventListener("click", getPokemonData)
+    </script>
+</body>
+</html>

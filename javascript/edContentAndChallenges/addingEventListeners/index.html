@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#container {
+				display: flex;
+				justify-content: space-around;
+			}
+			.column {
+				border: solid 1px black;
+				flex-grow: 1;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			#rainbow {
+				background-color: rgb(238, 130, 238); /* voilet */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div class="column">
+				<button id="challenge-one">Challenge 1</button>
+			</div>
+			<div class="column">
+				<button id="challenge-two">Challenge 2</button>
+				<ul></ul>
+			</div>
+			<div class="column" id="rainbow">
+				<button id="challenge-three">Challenge 3</button>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+		<script>activity()</script>
+	</body>
+</html>

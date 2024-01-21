@@ -1,0 +1,14 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.characters {
+    grid-column: 1 2;
+
+}
+
+.status {
+    grid-column: 2 3;
+
+}
