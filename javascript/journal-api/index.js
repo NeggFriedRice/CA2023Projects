@@ -1,8 +1,5 @@
 import express from 'express'
-import mongoose from 'mongoose'
-import dotenv from 'dotenv'
-
-dotenv.config()
+import { EntryModel } from './db.js'
 
 const categories = ['Food', 'Gaming', 'Coding', 'Other']
 
@@ -11,19 +8,6 @@ const entries = [
     { category: "Coding", content: "Coding is fun!" },
     { category: "Gaming", content: "Skyrim is for the Nords!" },
 ]
-// Copy connection string from MongoDB -> Connect page
-mongoose.connect(process.env.DB_URI)
-    .then((conn) => console.log(conn.connection.readyState === 1 ? 'MongoDB connected!' : 'MongoDB failed to connect'))
-    .catch((err) => console.log(err))
-
-process.on('SIGTERM', () => mongoose.disconnect())
-
-const entriesSchema = new mongoose.Schema({
-    category: { type: String, required: true},
-    content: { type: String, required: true}
-})
-
-const EntryModel = mongoose.model('Entry', entriesSchema)
 
 const app = express()
 
