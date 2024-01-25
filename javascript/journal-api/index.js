@@ -1,12 +1,9 @@
 import express from 'express'
 import { EntryModel, CategoryModel } from './db.js'
 
-const categories = ['Food', 'Gaming', 'Coding', 'Other']
-
 const app = express()
 
 app.use(express.json())
-
 
 // Get request will return req and res which can be used in callbacks
 app.get('/', (req, res) => res.send({ info: "Journal API" }))
@@ -20,8 +17,7 @@ app.get('/entries/:id', async (req, res) => {
         res.status(200).send(entry)
     } else {
         res.status(400).send({error: "Entry not found"})
-    }
-    
+    }    
 })
 
 app.post('/entries', async (req, res) => {

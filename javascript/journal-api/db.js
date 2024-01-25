@@ -22,17 +22,20 @@ process.on('SIGINT', () => {
     mongoose.disconnect()
 })
 
-const categoriesSchema = new mongoose.Schema({
-    name: { type: String, required: true}
-})
 
 const entriesSchema = new mongoose.Schema({
-    category: { type: String, required: true},
+    category: { type: mongoose.ObjectId, ref: "Category"},
     content: { type: String, required: true}
+}, { _id: false })
+
+const EntryModel = mongoose.model('Entry', entriesSchema)
+
+const categoriesSchema = new mongoose.Schema({
+    name: { type: String, required: true},
+    entries: [entriesSchema]
 })
 
 const CategoryModel = mongoose.model('Category', categoriesSchema)
 
-const EntryModel = mongoose.model('Entry', entriesSchema)
 
 export { closeConnection, EntryModel, CategoryModel }
