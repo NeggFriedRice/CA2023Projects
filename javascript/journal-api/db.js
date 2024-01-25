@@ -26,7 +26,7 @@ process.on('SIGINT', () => {
 const entriesSchema = new mongoose.Schema({
     category: { type: mongoose.ObjectId, ref: "Category"},
     content: { type: String, required: true}
-}, { _id: false })
+})
 
 const EntryModel = mongoose.model('Entry', entriesSchema)
 
