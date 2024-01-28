@@ -30,5 +30,4 @@ async function someAppFunction(){
     dbClose()
 }
 
-
 someAppFunction();
