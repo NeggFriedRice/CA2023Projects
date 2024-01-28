@@ -19,7 +19,7 @@ const closeConnection = () => {
     mongoose.disconnect()
     process.exit()
 }
-
+// Dev schema
 const developersSchema = new mongoose.Schema({
     name: { type: String },
     skills: { type: [String] }
@@ -28,4 +28,15 @@ const developersSchema = new mongoose.Schema({
 // Developer model (using mongoose)
 const Developer = mongoose.model('Developer', developersSchema)
 
-export { Developer }
+// Company schema
+const companySchema = new mongoose.Schema({
+    name: String,
+    employees: [developersSchema]
+})
+
+// Company model
+const Company = mongoose.model('Company', companySchema)
+
+
+
+export { Developer, Company }
