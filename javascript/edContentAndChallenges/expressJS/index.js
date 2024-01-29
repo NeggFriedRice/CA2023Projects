@@ -24,6 +24,12 @@ app.patch('/', (request, response) => messageWithVerb(request, response));
 app.delete('/', (request, response) => messageWithVerb(request, response));
 
 
+app.get('/:num1/add/:num2', (req, res) => {
+    let n1 = parseInt(req.params.num1)
+    let n2 = parseInt(req.params.num2)
+    res.json({result: n1 + n2})
+})
+
 app.get('/welcome', (req, res) => {
     res.send("Hello!")
 })
