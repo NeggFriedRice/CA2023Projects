@@ -24,11 +24,14 @@ function NestedHtml() {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ExampleFunctionComponent location="Melbourne">
+    <App />
+    {/* <ExampleFunctionComponent location="Melbourne">
       <SomeExampleHtml>
         <NestedHtml />
       </SomeExampleHtml>
     </ExampleFunctionComponent>
-    <ExampleClassComponent location="Sydney"/>
+    <ExampleClassComponent>
+      <SomeExampleHtml />
+    </ExampleClassComponent> */}
   </React.StrictMode>
 )

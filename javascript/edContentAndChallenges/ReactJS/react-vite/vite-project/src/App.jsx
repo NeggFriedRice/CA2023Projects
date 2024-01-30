@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
 
 let someCoolNavbar = <nav>
   <h1>Website title goes here</h1>
@@ -30,18 +31,39 @@ function DrinksList(props) {
 }
 
 function App(props) {
-  let availableDrinks = ["Orange Juice", "Mango Juice", "Orange and Mango Juice", "Water", "Black Coffee"]
+//   let availableDrinks = ["Orange Juice", "Mango Juice", "Orange and Mango Juice", "Water", "Black Coffee"]
+
+//   return (
+//     <div className="App" style={{backgroundColor: "grey", fontSize: 24, color:"blue"}}>
+//       {navPicker(1)}
+//       <p>Hello world!</p>
+//       <DrinksList availableDrinks={["Orange Juice", "Mango Juice", "Orange and Mango Juice", "Water", "Black Coffee"]}/>
+//       {availableDrinks.map((drink) => {
+//         return <li key={"id-" + drink}>{drink}</li>
+//       })}
+//     </div>
+//   );
+// }
+
+// YouTube video tutorial: https://www.youtube.com/watch?v=O6P86uwfdR0
+
+  const [count, setCount] = useState(4)
+
+  function decrementCount() {
+    setCount(previousCount => previousCount - 1)
+  }
+
+  function incrementCount() {
+    setCount(previousCount => previousCount + 1)
+  }
 
   return (
-    <div className="App" style={{backgroundColor: "grey", fontSize: 24, color:"blue"}}>
-      {navPicker(1)}
-      <p>Hello world!</p>
-      <DrinksList availableDrinks={["Orange Juice", "Mango Juice", "Orange and Mango Juice", "Water", "Black Coffee"]}/>
-      {availableDrinks.map((drink) => {
-        return <li key={"id-" + drink}>{drink}</li>
-      })}
-    </div>
-  );
+    <>
+      <button onClick={decrementCount}>-</button>
+      <button>{count}</button>
+      <button onClick={incrementCount}>+</button>
+    </>
+  )
 }
 
 export default App;
