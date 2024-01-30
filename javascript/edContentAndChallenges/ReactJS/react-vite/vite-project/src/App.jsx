@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 let someCoolNavbar = <nav>
   <h1>Website title goes here</h1>
@@ -47,23 +47,46 @@ function App(props) {
 
 // YouTube video tutorial: https://www.youtube.com/watch?v=O6P86uwfdR0
 
-  const [count, setCount] = useState(4)
+//   const [count, setCount] = useState(4)
 
-  function decrementCount() {
-    setCount(previousCount => previousCount - 1)
-  }
+//   function decrementCount() {
+//     setCount(previousCount => previousCount - 1)
+//   }
 
-  function incrementCount() {
-    setCount(previousCount => previousCount + 1)
-  }
+//   function incrementCount() {
+//     setCount(previousCount => previousCount + 1)
+//   }
 
-  return (
-    <>
-      <button onClick={decrementCount}>-</button>
-      <button>{count}</button>
-      <button onClick={incrementCount}>+</button>
-    </>
-  )
+//   return (
+//     <>
+//       <button onClick={decrementCount}>-</button>
+//       <button>{count}</button>
+//       <button onClick={incrementCount}>+</button>
+//     </>
+//   )
+// }
+
+const [posts, setPosts] = useState([]);
+
+useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(response => response.json())
+    .then(data => setPosts(data))
+    .then(data => console.log(data))
+}, []);
+
+return (
+    <div>
+        {posts.map((post, index) => {
+            return (
+                <div key={post.id}>
+                    <h2>{post.id} {post.title}</h2>
+                    <p>{post.body}</p>
+                </div>
+            );
+        })}
+    </div>
+);
 }
 
 export default App;
