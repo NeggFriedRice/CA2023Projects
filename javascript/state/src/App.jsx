@@ -1,7 +1,24 @@
-import React from 'react'
+import "./App.css"
+import React, { useState } from 'react'
+import BitcoinIndex from './BitcoinIndex'
 
-export const App = () => {
+
+// const ShowCount = ({ value }) => {
+//   return <p>You have clicked { value } times!</p>
+// }
+
+const App = () => {
+
   return (
-    <div>App</div>
+    <>
+      <h1>Bitcoin Index</h1>
+      <BitcoinIndex />
+    </>
   )
 }
+
+export default App
+
+
+
+
