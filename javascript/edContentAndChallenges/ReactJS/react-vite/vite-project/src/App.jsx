@@ -19,13 +19,24 @@ function navPicker(number) {
   }
 }
 
-let availableDrinks = ["Orange Juice", "Mango Juice", "Orange and Mango Juice", "Water", "Black Coffee"]
-
-function App() {
+function DrinksList(props) {
   return (
-    <div className="App">
+    <ul>
+      {props.availableDrinks.map(drink => {
+        return <li key={"id-"+drink}>{drink}</li>
+      })}
+    </ul>
+  )
+}
+
+function App(props) {
+  let availableDrinks = ["Orange Juice", "Mango Juice", "Orange and Mango Juice", "Water", "Black Coffee"]
+
+  return (
+    <div className="App" style={{backgroundColor: "grey", fontSize: 24, color:"blue"}}>
       {navPicker(1)}
       <p>Hello world!</p>
+      <DrinksList availableDrinks={["Orange Juice", "Mango Juice", "Orange and Mango Juice", "Water", "Black Coffee"]}/>
       {availableDrinks.map((drink) => {
         return <li key={"id-" + drink}>{drink}</li>
       })}
