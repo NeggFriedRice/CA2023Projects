@@ -14,7 +14,7 @@ const BitcoinIndex = () => {
   
   return (
     <>
-      <CurrencySelector setCurrency={setCurrency}/>
+      <CurrencySelector currency={currency} setCurrency={setCurrency}/>
       <p>Current Price ({currency}): ${price}</p>
     </>
   )
