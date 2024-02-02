@@ -33,9 +33,9 @@ useEffect(() => {
         .then(data => data.json())
         .then(obj => setPokeSprite(obj.sprites.front_default))
         .catch(err => {
+            setPokeSprite("Not found")
             alert("Pokemon not found!")
-            setPokeSprite("Broken")
-            setPokeName("Not found")
+
         })
 }, [pokeName]) 
 

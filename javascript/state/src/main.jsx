@@ -5,8 +5,10 @@ import "./index.css"
 // import Demo from "./pages/index"
 import PokeAPI from "./pages/pokeAPI.jsx"
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <App />
   // <Demo />
-  <PokeAPI />
+  // <PokeAPI />
+  <App />
 )
