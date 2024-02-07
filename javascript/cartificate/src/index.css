@@ -51,6 +51,7 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
+  margin-top: 1rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -77,4 +78,35 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.textarea {
+  border-radius: 5%;
+}
+
+#root > form > div.react-datepicker-wrapper > div > input[type=text] {
+  background-color: rgb(128, 182, 155);
+  font-size: 1.5rem;
+  border-radius: 2em;
+  border-color:#8ad2c6;
+  padding-left: 1rem;
+}
+
+#root > form > div.react-datepicker__tab-loop > div.react-datepicker-popper > div > div > div {
+  min-width: 280px;
+  background-color: rgb(209, 235, 225);
+  border-radius: 1rem;
+
+}
+
+#root > form > div.react-datepicker__tab-loop > div.react-datepicker-popper > div > div > div > div.react-datepicker__header {
+  border-radius: 1rem;
+  border-color: rgb(79, 140, 135);
+}
+
+.react-datepicker {
+  border-color: rgb(79, 140, 135);
+  border-width: 3px;
+  border-radius: 1rem;
+
 }
