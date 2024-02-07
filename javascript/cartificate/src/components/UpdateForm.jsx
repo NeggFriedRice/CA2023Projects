@@ -11,7 +11,6 @@ const UpdateForm = ({updates, setUpdates}) => {
   }
 
   let [activity, setActivity] = useState(initialEntry)
-  // console.log(activity)
 
   function changeHandler(event) {
     let { name, value } = event.target
@@ -41,7 +40,6 @@ const UpdateForm = ({updates, setUpdates}) => {
 
   function showUpdates(event) {
     console.log(updates)
-    console.log(date)
   }
   
   // Date picker from refine.dev
@@ -72,10 +70,9 @@ const UpdateForm = ({updates, setUpdates}) => {
         </div>
         <h2>Extra notes</h2>
         <textarea className="textarea" rows="10" name="notes" value={activity.notes} onChange={changeHandler}></textarea>
-        <button className="button is-primary is-light" type="submit">Submit</button>
-        <button className="button is-primary is-light" onClick={showUpdates}>Console Log updates</button>
-        
+        <button className="button is-primary is-light" type="submit">Submit</button>        
       </form>
+      <button className="button is-primary is-light" onClick={showUpdates}>Console Log updates</button>
     </>
   )
 }

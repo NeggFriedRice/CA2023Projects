@@ -84,11 +84,11 @@ button:focus-visible {
   border-radius: 5%;
 }
 
-#root > form > div.react-datepicker-wrapper > div > input[type=text] {
-  background-color: rgb(128, 182, 155);
+.react-datepicker-wrapper > div > input[type=text] {
+  background-color: rgb(131, 189, 159);
   font-size: 1.5rem;
   border-radius: 2em;
-  border-color:#8ad2c6;
+  border: none;
   padding-left: 1rem;
 }
 
@@ -108,5 +108,4 @@ button:focus-visible {
   border-color: rgb(79, 140, 135);
   border-width: 3px;
   border-radius: 1rem;
-
 }
