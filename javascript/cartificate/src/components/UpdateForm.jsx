@@ -7,6 +7,7 @@ const UpdateForm = ({updates, setUpdates}) => {
   let initialEntry = {
     activity: "",
     date: "",
+    cost: "",
     notes: ""
   }
 
@@ -26,9 +27,10 @@ const UpdateForm = ({updates, setUpdates}) => {
 
   function submitHandler(event) {
     event.preventDefault()
-    let updateObject = {
+    let updateObject = { 
       activity: activity.activity,
       date: dateMod(date),
+      cost: activity.cost,
       notes: activity.notes
     }
 
@@ -42,18 +44,19 @@ const UpdateForm = ({updates, setUpdates}) => {
     console.log(updates)
   }
   
-  // Date picker from refine.dev
+  
   const [date, setDate] = useState(new Date())
 
   return (
     <>
       <form onSubmit={submitHandler}>
-        <h1>The things I did</h1>
+        <h1>Maintenance logger</h1>
         <h2>Activity type</h2>
         <input className="input is-rounded" type="text" name="activity" placeholder="Oil change, replaced brake rotors" value={activity.name} onChange={changeHandler}/>
         <h2>Date</h2>
         <DatePicker selected={date} onChange={(date) => setDate(date)} dateFormat="dd/MM/yy"/>
-        {/* <input className="input is-rounded" type="text" name= "date" placeholder="dd/mm/yy" value={activity.date} onChange={changeHandler}/> */}
+        <h2>Cost</h2>
+        <input className="input is-rounded" type="text" name="cost" placeholder="$" value={activity.cost} onChange={changeHandler}/>
         <h2>Receipt</h2>
         <div className="file">
           <label className="file-label">
