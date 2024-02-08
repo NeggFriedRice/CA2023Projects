@@ -41,6 +41,7 @@
   color: rgb(153, 216, 172);
   background: none;
   margin-left: 10px;
+  transition: 0.5s;
 }
 
 .log-container {

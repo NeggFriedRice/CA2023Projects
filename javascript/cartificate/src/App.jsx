@@ -11,19 +11,19 @@ function App() {
   // const [count, setCount] = useState(0)
   const placeHolderUpdates = [{
     activity: "Oil change",
-    date: "08 Feb 2024",
+    date: "Feb 08 2024",
     cost: "199",
     notes: "Nothing to add"
   },
   {
     activity: "Brake rotors",
-    date: "08 December 2023",
+    date: "Dec 08 2023",
     cost: "459",
     notes: "Pads to be changed at next service"    
   },
   {
     activity: "Tyre rotation",
-    date: "24 September 2023",
+    date: "Sep 24 2023",
     cost: "172",
     notes: "Bob Jane Box Hill"    
   }
