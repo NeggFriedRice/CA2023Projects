@@ -10,28 +10,17 @@
 // https://www.mongodb.com/docs/mongodb-vscode/playgrounds/
 
 // Select the database to use.
-use('journal');
-
-const categories = db.getCollection('categories')
+use('journal')
 
 db.categories.drop()
-
-// db.categories.insertMany([
-//     { name: 'Food'} ,
-//     { name: 'Gaming' },
-//     { name: 'Coding' },
-//     { name: 'Other' }
-// ])
-categories.insertMany([
-    { name: 'Food'} ,
+db.categories.insertMany([
+    { name: 'Food' },
     { name: 'Gaming' },
     { name: 'Coding' },
     { name: 'Other' }
 ])
 
 // db.createCollection('categories')
-
-
 
 // Insert a few documents into the sales collection.
 // db.getCollection('sales').insertMany([
