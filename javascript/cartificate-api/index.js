@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
 
-app.use('/update', router)
+app.use('/updates', router)
 
 app.get('/', (req, res) => {
   res.send({
