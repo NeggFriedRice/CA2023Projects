@@ -33,8 +33,8 @@ router.put('/:id', async (req, res) => {
             res.status(404).send({ error: 'Entry not found' })
         }
     }
-    catch (err) {
-        res.status(500).send({ error: err.message })
+    catch (error) {
+        res.status(500).send({ error: error.message })
     }
 })
 
