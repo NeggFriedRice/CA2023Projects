@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ShowUpdate = ({ updates }) => {
-  console.log(updates)
   return (
     <>
     <div className="log-container">

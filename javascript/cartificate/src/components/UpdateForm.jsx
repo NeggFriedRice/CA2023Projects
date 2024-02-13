@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import { useNavigate } from 'react-router-dom'
 
-const UpdateForm = ({updates, setUpdates}) => {
+const UpdateForm = ({updates, setUpdates, addUpdate}) => {
+
+  const nav = useNavigate()
 
   let initialEntry = {
     activity: "",
@@ -25,26 +28,19 @@ const UpdateForm = ({updates, setUpdates}) => {
     return monthDayYear
   }
 
-  function submitHandler(event) {
+  async function submitHandler(event) {
     event.preventDefault()
-    let updateObject = { 
-      activity: activity.activity,
-      date: dateMod(date),
-      cost: activity.cost,
-      notes: activity.notes
-    }
-
-    setUpdates(
-      [...updates,
-      updateObject
-      ])
+    activity.date = dateMod(date)
+    await addUpdate(activity)
+    console.log(activity)
+    nav('/')
   }
 
   function showUpdates(event) {
-    console.log(updates)
+    event.preventDefault()
+    console.log(activity)
   }
-  
-  
+    
   const [date, setDate] = useState(new Date())
 
   return (
@@ -56,7 +52,7 @@ const UpdateForm = ({updates, setUpdates}) => {
         <h2>Date</h2>
         <DatePicker selected={date} onChange={(date) => setDate(date)} dateFormat="dd/MM/yy"/>
         <h2>Cost</h2>
-        <input className="input is-rounded" type="text" name="cost" placeholder="$" value={activity.cost} onChange={changeHandler}/>
+        <input className="input is-rounded" type="tel" name="cost" placeholder="$" value={activity.cost} onChange={changeHandler}/>
         <h2>Receipt</h2>
         <div className="file">
           <label className="file-label">

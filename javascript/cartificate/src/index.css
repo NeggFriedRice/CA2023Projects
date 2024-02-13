@@ -27,12 +27,12 @@
   border-radius: 0 0 30px 30px; 
 }
 
-.navbar-item {
+.navbar-item, .navbar-link:focus, .navbar-link:focus-within, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within {
   color: white;
   margin-left: 10px;
 }
 
-.navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
+.navbar-link:hover, a.navbar-item:hover {
   color: rgb(173, 209, 179);
   background: none;
 }
