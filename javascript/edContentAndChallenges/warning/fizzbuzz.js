@@ -1,0 +1,1 @@
+let number = prompt("What number do you want to fizz buzz to? ")
