@@ -33,6 +33,7 @@ const UpdateForm = ({updates, setUpdates, addUpdate}) => {
     activity.date = dateMod(date)
     await addUpdate(activity)
     console.log(activity)
+    console.log(updates.length)
     nav('/')
   }
 
