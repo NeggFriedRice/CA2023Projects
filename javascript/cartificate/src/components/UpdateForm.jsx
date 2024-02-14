@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import { useNavigate } from 'react-router-dom'
 
-const UpdateForm = ({updates, setUpdates, addUpdate}) => {
+const UpdateForm = ({updates, addUpdate}) => {
 
   const nav = useNavigate()
 

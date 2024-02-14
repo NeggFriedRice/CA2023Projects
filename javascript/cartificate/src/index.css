@@ -97,6 +97,25 @@ h3 {
   color: rgb(174, 226, 199);
 }
 
+.delete-entry {
+  font-size: 0.7em;
+  margin: 1rem;
+  line-height: 1.1;
+  color: rgb(255, 255, 255);
+}
+
+.update-notes {
+  font-size: 1.3em;
+  margin: 1rem;
+  line-height: 1.1;
+  color: rgb(255, 255, 255);
+}
+
+.update-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -105,7 +124,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #cf3549;
   cursor: pointer;
   transition: border-color 0.25s;
 }

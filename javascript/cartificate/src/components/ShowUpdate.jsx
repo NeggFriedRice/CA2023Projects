@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ShowUpdate = ({ updates }) => {
   return (
@@ -7,7 +7,9 @@ const ShowUpdate = ({ updates }) => {
       <ul>
         {updates.map((update, index) => 
           <li key={index}>
-            <h3>{index + 1}. {update.activity} ${update.cost}</h3>
+            <Link to={`updates/${index}`} className="update-link">
+              <h3>{index + 1}. {update.activity} ${update.cost}</h3>
+            </Link>
             <p className="update-display">{update.date}</p>
           </li>)}
       </ul>
