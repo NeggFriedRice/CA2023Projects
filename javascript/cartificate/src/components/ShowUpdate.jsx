@@ -7,9 +7,14 @@ const ShowUpdate = ({ updates }) => {
       <ul>
         {updates.map((update, index) => 
           <li key={index}>
-            <Link to={`updates/${index}`} className="update-link">
-              <h3>{index + 1}. {update.activity} ${update.cost}</h3>
-            </Link>
+            
+              <Link to={`updates/${index}`}>
+                <div className="update-homepage">
+                <h3 className="update-link">{index + 1}. {update.activity}</h3>
+                <h3>${update.cost}</h3>
+                </div>
+              </Link>
+            
             <p className="update-display">{update.date}</p>
           </li>)}
       </ul>

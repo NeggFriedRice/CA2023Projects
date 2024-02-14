@@ -92,10 +92,11 @@ h3 {
 
 .update-display {
   font-size: 1em;
-  margin: 1rem;
+  margin: 0 1rem;
   line-height: 1.1;
   color: rgb(174, 226, 199);
 }
+
 
 .delete-entry {
   font-size: 0.7em;
@@ -109,6 +110,17 @@ h3 {
   margin: 1rem;
   line-height: 1.1;
   color: rgb(255, 255, 255);
+}
+
+.update-homepage {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-link:hover {
+  color: rgb(187, 222, 195);
+  transition: 0.3s;
 }
 
 .update-title {
