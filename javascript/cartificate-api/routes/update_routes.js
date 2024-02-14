@@ -8,6 +8,12 @@ router.get('/', async (req, res) => {
   res.send(await UpdateModel.find())
 })
 
+// Find single update
+router.get('/:id', async (req, res) => {
+  const listUpdates = await UpdateModel.find()
+  res.send(listUpdates[req.params.id])
+})
+
 // Add new update
 router.post('/new', async (req, res) => {
   try {
