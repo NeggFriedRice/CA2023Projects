@@ -12,14 +12,19 @@
 # 625 --> 676
 # 114 --> -1 since 114 is not a perfect square
 
+# def find_next_square(sq):
+#     i = 0
+#     while i < sq:
+#         if i * i == sq:
+#             return ((i+1) * (i+1))
+#         i += 1
+#     return -1
+
 def find_next_square(sq):
-    i = 0
-    while i < sq:
-        if i * i == sq:
-            return ((i+1) * (i+1))
-        i += 1
+  for i in range(sq):
+    if i * i == sq:
+      return (i+1) ** 2
+  else:
     return -1
 
-        
-
-print(find_next_square(625))
+print(find_next_square(121))

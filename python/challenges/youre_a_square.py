@@ -20,17 +20,30 @@
 # 25  =>  true
 # 26  =>  false
 
+# def is_square(n):
+#     # Count up from 0 to n
+#     if n == 0:
+#         return True
+#     elif n > 0:
+#         i = 0
+#         while i < n:
+#             if i * i == n:
+#                 return True
+#             i += 1
+#         return False
+#     else:
+#         return False
+# print(is_square(25))
+
 def is_square(n):
-    # Count up from 0 to n
     if n == 0:
         return True
     elif n > 0:
-        i = 0
-        while i < n:
-            if i * i == n:
+        for i in range(n):
+            if i ** 2 == n:
                 return True
-            i += 1
-        return False
-    else:
-        return False
-print(is_square(-1))
+        else:
+            return False
+    else: return False
+    
+print(is_square(3))
