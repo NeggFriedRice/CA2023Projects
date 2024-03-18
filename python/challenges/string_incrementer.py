@@ -7,14 +7,28 @@ def increment_string(strng):
 			array.append(strng[i])
 		else:
 			break
-		
-	if len(array) == 0:
+	
+	if strng == "":
+		return '1'
+	elif strng[-1] == str(0):
+		return strng[:-1] + str(1)
+
+	elif len(array) == 0:
 		return strng + str(1)
+	
 	else:
-		array.reverse()
-		trailing_nums = "".join(array)
+		zeroes_array = []
+		numbers_array = []
+		for i in range(len(array)):
+			if array[i] == '0':
+				zeroes_array.append("0")
+			else:
+				numbers_array.append(array[i])
+		numbers_array.reverse()
+		trailing_nums = "".join(numbers_array)
 		new_num = int(trailing_nums) + 1
 		new_strng = strng[0:(-len(array))]
-		return new_strng + str(new_num)
+		final_strng = "".join(new_strng) + "".join(zeroes_array)
+		return final_strng + str(new_num)
 
-print(increment_string("foo15"))
+print(increment_string("foobar00"))
